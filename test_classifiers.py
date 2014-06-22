@@ -29,8 +29,8 @@ classifiers = [SGDClassifier(loss="log", penalty="l1", class_weight="auto"),
 		KNeighborsClassifier(),
 		AdaBoostClassifier(),
 		QDA(),
-		SVC(kernel="linear", C=0.025),
-		SVC(gamma=2, C=1)]
+		SVC(kernel="linear", C=0.025, probability=True),
+		SVC(gamma=2, C=1, probability=True)]
 
 from sklearn.metrics import roc_auc_score
 
