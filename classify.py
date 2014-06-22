@@ -1,7 +1,14 @@
 # Constants
 NUMBER_OF_COMPONENTS = 200 # the remaining number of components after dimension reduction
-TRAIN_PATH = "c:\\gravity\\valami_train_no_duplicates.txt"
-TEST_PATH = "c:\\gravity\\valami_test.txt"
+
+import sys
+
+if(len(sys.argv) != 3):
+	print("Usage: python classify.py <train_database> <test_database>")
+	exit()
+
+TRAIN_PATH = sys.argv[1]
+TEST_PATH = sys.argv[2]
 
 from load_data import load_data
 print("Loading data...")
