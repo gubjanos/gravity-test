@@ -9,4 +9,4 @@ x, x_test = scale(x, x_test)
 
 print("Dimension reduction...")
 from transforming import dimension_reduction
-dimension_reduction(x, x_test, 200)
+x, x_test = dimension_reduction(x, x_test, 200)
